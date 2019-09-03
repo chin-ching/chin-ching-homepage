@@ -1,0 +1,45 @@
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .navbar-fixed-width {
+        width: 768px;
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .navbar-fixed-width {
+        width: 992px;
+        margin-left: auto;
+        margin-right:auto;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .navbar-fixed-width {
+        width: 1200px;
+        margin-left: auto;
+        margin-right:auto;
+    }
+}
+
+@media all and (max-width: 992px) {
+    #pageTopCarousel img {
+        height: 300px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #pageTopCarousel img {
+        height: 240px;
+    }
+}

@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="zh-Hant">
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        var pss = prompt("請輸入密碼 : ");
+        var goback = true;
+        if (pss != null) {
+            if (typeof crypto.subtle !== 'undefined' && typeof TextEncoder !== 'undefined') {
+            	var data = new TextEncoder().encode(pss);
+            	var pormise = crypto.subtle.digest("SHA-1", data);
+                pormise.then(value => {
+                    var array = new Uint8Array(value);
+                    var hexs = [...array].map(value => {
+                        const hexCode = value.toString(16);
+                        const paddedHexCode = hexCode.padStart(2, '0');
+                        return paddedHexCode;
+                    });
+                    var hex = hexs.join('');
+                    //console.log(hex);
+                    if (hex == "7110eda4d09e062aa5e4a390b0a572ac0d2c0220") {
+                        goback = false;
+                    }
+                });
+            }
+            else if (pss == "1234") {
+                goback = false;
+            }
+        }
+
+    </script>
+    <head>
+        <noscript>
+            <meta http-equiv="refresh" content="0; url=home.html">    
+        </noscript>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+        <link rel="stylesheet" href="../css/body_font.css">
+        <link rel="stylesheet" href="../css/screen_size.css">
+
+        <!-- jQuery first -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="../js/favicon.js"></script>
+
+        <title>金晶關係企業 - 員工專區</title>
+    </head>
+
+    <body style="margin-top: 111px">
+        <script type="text/javascript">
+            if (goback) {
+                window.location.replace("home.html");
+            }  
+        </script>
+        <div class="container d-none" id="container">
+
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+            <div class="row" id="page_header">  <!-- Header -->
+                <script>$(function(){$("#page_header").load("header.html");});</script>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+            <div class="row" id="page_carousel">  <!-- Carousel -->
+                <!-- <script>$(function(){$("#page_carousel").load("../carousel.html");});</script> -->
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+            <!-- ----------------------------------------------------------- -->
+            <div class="row"><div class="col"><hr class="invisible"></div></div>
+            <!-- ----------------------------------------------------------- -->
+
+            <div class="row" style="text-indent: 15px">
+                <h3>員工專區</h3>
+            </div>
+
+            <!-- -------------------------------------------------------------- -->
+            <div class="row pb-4"><div class="col"><hr class="visible"></div></div>
+            <!-- -------------------------------------------------------------- -->
+
+            <div class="row">
+                <div class="col">
+                    <div class="row" style="text-indent: 30px"><h4>ISO 表單：</h4></div>
+                    <div class="row mt-3">
+                        <div class="col-md-10 offset-md-1">
+                            <figure class="figure mx-3">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#chinchingisos">
+                                    <img src="../icons/icon_file.png" class="figure-img img-fluid img-thumbnail">
+                                    <figcaption class="figure-caption text-center">金晶</figcaption>
+                                </button>
+                            </figure>
+                            <figure class="figure mx-3">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#chinlongisos">
+                                    <img src="../icons/icon_file.png" class="figure-img img-fluid img-thumbnail">
+                                    <figcaption class="figure-caption text-center">金隆</figcaption>
+                                </button>
+                            </figure>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="chinchingisos" tabindex="-1" role="dialog" aria-labelledby="chinchingModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">金晶 ISO 表單</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-dark disabled" tabindex="-1" aria-disabled="true">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        編號
+                                                    </div>
+                                                    <div class="col-3">
+                                                        版本
+                                                    </div>
+                                                    <div class="col-6 col-lg-7">
+                                                        名稱
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/1.組織背景分析程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        組織背景分析程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/3.客戶導向流程管制程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        003
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        客戶導向流程管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/5.風險與機會分析程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        005
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        風險與機會分析程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/6.過程風險評估管制程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        006
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        過程風險評估管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/7.設施維護保養程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        007
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        設施維護保養程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/8.電腦資訊管理作業程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        008
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        電腦資訊管理作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/9.量測與監督設備管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        009
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        量測與監督設備管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/10.教育訓練及資格鑑定管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        010
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        教育訓練及資格鑑定管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/11.溝通管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        011
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        溝通管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/12.文件制修訂管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        012
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        文件制修訂管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/13.品質記錄管制程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        013
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        品質記錄管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/14.客戶需求鑑別程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        014
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        客戶需求鑑別程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/15.客戶要求審查程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        015
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        客戶要求審查程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/16.新產品開發管制程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        016
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        新產品開發管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/17.工程變更管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        017
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        工程變更管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/18.採購管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        018
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        採購管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/19.供應商評估管制程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        019
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        供應商評估管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/20.進料倉儲管制程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        020
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        進料倉儲管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/21.生管作業程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        021
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        生管作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/22.製程管制作業程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        022
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        製程管制作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/23.產品確認與追溯程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        023
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        產品確認與追溯程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/25.成品倉儲管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        025
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        成品倉儲管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/27.量測及監督管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        027
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        量測及監督管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/28.不合格品管制程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        028
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        不合格品管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/29.客戶滿意度衡量程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        029
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        客戶滿意度衡量程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/31.內部稽核管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        031
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        內部稽核管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/32.管理審查程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        032
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        管理審查程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/33.經營計畫與績效管理改善程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        033
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        經營計畫與績效管理改善程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/34.矯正與預防措施管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        034
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        矯正與預防措施管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_CC/35.作業環境管理程序.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        035
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        作業環境管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="chinlongisos" tabindex="-1" role="dialog" aria-labelledby="chinlongModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">金隆 ISO 表單</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-dark disabled" tabindex="-1" aria-disabled="true">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        編號
+                                                    </div>
+                                                    <div class="col-3">
+                                                        版本
+                                                    </div>
+                                                    <div class="col-6 col-lg-7">
+                                                        名稱
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0410001組織背景分析程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0410001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        組織背景分析程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0420001環境利害相關者管理程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0420001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        環境利害相關者管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0440001客戶導向流程管制程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0440001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        客戶導向流程管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0520001品質及環境政策程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0520001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        品質及環境政策程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0611001風險與機會分析程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0611001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        風險與機會分析程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0611002過程風險評估管制程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0611002
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        過程風險評估管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0611003環境風險與機會應對管理程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0611003
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        環境風險與機會應對管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0612001環境考量面辨識與評估管理程序1.1.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0612001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.1</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        環境考量面辨識與評估管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0613001法規及其他要求管理程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0613001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        法規及其他要求管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0620001品質及環境目標與規劃的達成程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0620001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        品質及環境目標與規劃的達成程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0713001設施維護保養程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0713001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        設施維護保養程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0713002電腦資訊管理程序3.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0713002
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">3.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        電腦資訊管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0715001量測與監督設備管制程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0715001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        量測與監督設備管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0716001知識管理作業程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0716001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        知識管理作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0720001教育訓練及資格鑑定管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0720001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        教育訓練及資格鑑定管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0740001溝通管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0740001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        溝通管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0750001文件制修訂管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0750001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        文件制修訂管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0750002品質及環境記錄管制程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0750002
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        品質及環境記錄管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0810003廢水排放管理程序1.1.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0810003
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.1</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        廢水排放管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0810004廢氣排放管理程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0810004
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        廢氣排放管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0810005廢棄物排放管理程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0810005
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        廢棄物排放管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0810006噪音排放管理程序1.1.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0810006
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.1</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        噪音排放管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0810008能源及資源節約管理程序1.1.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0810008
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.1</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        能源及資源節約管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0820001緊急應變與處理管制程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0820001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        緊急應變與處理管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0822001顧客需求鑑別程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0822001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        顧客需求鑑別程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0823001顧客需求審查程序2.1.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0823001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.1</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        顧客需求審查程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0830001設計管制程序3.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0830001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">3.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        設計管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0836001工程變更管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0836001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        工程變更管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0840001進料倉儲管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0840001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        進料倉儲管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0841001採購管理程序2.1.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0841001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.1</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        採購管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0842001供應商評估管制程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0842001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        供應商評估管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0850001生管作業程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0850001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        生管作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0851001製程管制作業程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0851001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        製程管制作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0855001成品倉儲管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0855001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        成品倉儲管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0855002交貨管制程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0855002
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        交貨管制程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0860002進料量測與監督管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0860002
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        進料量測與監督管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0860003製程中量測與監督管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0860003
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        製程中量測與監督管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0860004最終量測與監督管理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0860004
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        最終量測與監督管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0912001顧客滿意度衡量程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0912001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        顧客滿意度衡量程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0912002客戶抱怨處理程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0912002
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        客戶抱怨處理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0912003符合性評估管理程序1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0912003
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        符合性評估管理程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0920001內部品質稽核程序2.1.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0920001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.1</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        內部品質稽核程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B0930001管理審查程序3.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B0930001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">3.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        管理審查程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B1020001矯正措施作業程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B1020001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        矯正措施作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單B1020002預防措施作業程序2.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        B1020002
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">2.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        預防措施作業程序
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="../form_KL/表單C0713001網際網路暨電子郵件帳號實施辦法1.0.xls" class="list-group-item list-group-item-action">
+                                                <div class="row">
+                                                    <div class="col-3 col-lg-2">
+                                                        C0713001
+                                                    </div>
+                                                    <div class="col-2 col-lg-1">
+                                                        <span class="badge badge-info">1.0</span>
+                                                    </div>
+                                                    <div class="col-7 col-lg-9">
+                                                        網際網路暨電子郵件帳號實施辦法
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------------------------------------------------------- -->
+            <div class="row"><div class="col"><hr class="invisible"></div></div>
+            <!-- ----------------------------------------------------------- -->
+
+            <div class="row">
+                <div class="col">
+                    <div class="row" style="text-indent: 30px"><h4>信箱：</h4></div>
+                    <div class="row mt-3">
+                        <div class="col-md-10 offset-md-1">
+                            <figure class="figure mx-3">
+                                <!-- <a href="https://mail-server.chin-ching.com.tw" target="_blank"> -->
+                                <a href="http://mail.chin-ching.com.tw:81/webmail.chin-ching" target="_blank">
+                                    <img src="../icons/icon_webmail.png" class="figure-img img-fluid img-thumbnail">
+                                    <figcaption class="figure-caption text-center">金晶 WebMail</figcaption>
+                                </a>                                        
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+            <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+            <div class="row" id="page_footer">  <!-- Footer -->
+                <script>$(function(){$("#page_footer").load("../footer.html");});</script>
+            </div>
+          
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery at top, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="../js/multilanguage.js"></script>
+        <script src="../js/persistenttab.js"></script>
+        <script type="text/javascript">
+            if (!goback) {
+                $("#container").removeClass("d-none");
+            }
+        </script>
+    </body>
+</html>

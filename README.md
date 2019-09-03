@@ -1,2 +1,0 @@
-# chin-ching-homepage
- 

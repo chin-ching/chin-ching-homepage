@@ -1,0 +1,90 @@
+document.write('\
+                            <!-- ----------------------------------------------------------- -->\
+                            <div class="row"><div class="col"><hr class="invisible"></div></div>\
+                            <!-- ----------------------------------------------------------- -->\
+\
+                            <div class="row" style="text-indent: 30px"><h4>品質管制與研發中心：</h4></div>\
+                            <div class="row mt-3">\
+                            	<div class="col-sm-12 col-md-7 offset-md-1">\
+                            		<div class="row" style="text-indent: 30px">\
+                            			本公司為了確保產品品質，提升製造能力，並開發更符合客戶需求的產品，不惜投下巨資，設立了設備完善的品質管制及研究開發中心。\
+                            		</div>\
+                            		<div class="row" style="text-indent: 30px">\
+                            			該中心除配置一流的檢驗分析儀器及開發設備外，亦延聘國內、外資深顧問，並訓練了一批敬業、專精的品管研發專業人才。\
+                            		</div>\
+                            		<div class="row" style="text-indent: 30px">\
+                            			該中心除了不斷研發更好更具競爭力的產品，及更佳的製程；並對使用本公司產品的客戶提供更進一步的品質保障。\
+                            		</div>\
+                            	</div>\
+                            	<div class="col-md-3">\
+                            		<img src="../images/about_qcrd_01.jpg" class="mx-auto d-block">\
+                            	</div>\
+                            </div>\
+\
+                            <!-- ----------------------------------------------------------- -->\
+                            <div class="row py-4"><div class="col"><hr class="visible"></div></div>\
+                            <!-- ----------------------------------------------------------- -->\
+\
+                            <div class="row" style="text-indent: 30px"><h4>實驗與品管設備：</h4></div>\
+                            <div class="row mt-3">\
+                            	<div class="col-md-10 offset-md-1">\
+	                            	<table class="table table-bordered table-striped text-center">\
+	                            		<tbody>\
+	                            			<tr>\
+	                            				<td>化學天平</td>\
+	                            				<td>電動天平</td>\
+	                            				<td>高溫電爐</td>\
+	                            				<td>恆溫箱</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td>PH測定儀</td>\
+	                            				<td>標準震篩機</td>\
+	                            				<td>標準篩</td>\
+	                            				<td>白金坩堝</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td>瑪瑙缽</td>\
+	                            				<td>COD測定儀</td>\
+	                            				<td>BOD測定儀</td>\
+	                            				<td>二次蒸餾水</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td>含泥量測定機</td>\
+	                            				<td>矽分析設備</td>\
+	                            				<td>常溫抗壓試驗機</td>\
+	                            				<td>熱抗拉試驗機</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td class="align-middle">RCS黏著點試驗機</td>\
+	                            				<td>萬能強度試驗機<br>(520Psi)</td>\
+	                            				<td>萬能強度試驗機<br>(2Tons)</td>\
+	                            				<td class="align-middle">實驗用RCS混鍊機</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td>白度比色計</td>\
+	                            				<td>UV 分析儀</td>\
+	                            				<td>電位差滴定儀</td>\
+	                            				<td>液相層分析儀HPLC</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td>GPC 分析儀</td>\
+	                            				<td>福馬林分析設備</td>\
+	                            				<td>石碳酸分析設備</td>\
+	                            				<td>水分微量分析儀</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td>品川式混鍊機</td>\
+	                            				<td>N素含量分析儀</td>\
+	                            				<td>甲醛分析儀</td>\
+	                            				<td>廢水處理分析設備</td>\
+	                            			</tr>\
+	                            			<tr>\
+	                            				<td>COD 加熱計</td>\
+	                            				<td>AA 光譜儀</td>\
+	                            				<td>ICP 質譜儀</td>\
+	                            				<td></td>\
+	                            			</tr>\
+	                            		</tbody>\
+	                            	</table>\
+                            	</div>\
+                            </div>\n');
